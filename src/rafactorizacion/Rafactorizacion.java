@@ -12,17 +12,26 @@ package rafactorizacion;
 public class Rafactorizacion {
 
     public static void main(String[] args) {
-// TODO code application logic here
-        int[] v = new int[5];
-        v[0] = 2;
-        v[1] = 4;
-        v[2] = 6;
-        v[3] = 8;
-        Prueba p = new Prueba();
-        p.valor = 10;
-        p.mo(v);
-        p.bo(v);
-        p.in(v);
+// TODO code application logsic here
+        
+        CambiaLongitud posicion = new CambiaLongitud();
+        NoCambiaLongitud Noposicion = new NoCambiaLongitud();
+        
+        int longitudActual = 0;
+         
+        int[] vector = new int[5];
+        vector[0] = 2;
+        vector[1] = 4;
+        vector[2] = 6;
+        vector[3] = 8;
+       
+        int longitud = vector.length;
+        
+        posicion.setValor(10);
+        posicion.modificar(vector, longitudActual, longitud, longitud, posicion);
+        posicion.borrar(vector, longitudActual, longitud);
+        posicion.insertar(vector, longitudActual, longitud);
+        
     }
 
 }
